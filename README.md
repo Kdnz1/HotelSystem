@@ -29,24 +29,21 @@ src/
 
 ## Configuração do Banco de Dados
 
-1. Crie o banco de dados executando o script SQL:
-```sql
-mysql -u root < hotelDB.sql
-```
+1. Exporte o script hotelDB.sql em um servidor local, o utilizado foi o XAMPP:
 
 2. Verifique as credenciais em `src/dao/Conexao.java`:
    - URL: `jdbc:mysql://localhost:3306/hotelDB`
    - Usuário: `root`
    - Senha: (em branco por padrão)
 
-## Compilação
+## Compilação powershell ou terminal
 
 Selecione o diretório utilizando o comando:
 `cd src`
 
 No diretório `src`, execute:
 
-```powershell
+```
 javac -cp "lib\mysql-connector-java-5.1.49.jar" -d . SistemaHotel.java dao\Conexao.java dao\HospedeDAO.java dao\QuartoDAO.java dao\ReservaDAO.java model\Hospede.java model\Quarto.java model\Reserva.java
 ```
 
