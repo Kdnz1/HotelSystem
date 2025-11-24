@@ -22,6 +22,10 @@ public class ReservaDAO {
     public ArrayList<Reserva> listar() {
         ArrayList<Reserva> lista = new ArrayList<>();
         String sql = "SELECT r.*, h.nome, q.numero, q.tipo, q.valor_diaria FROM reserva r JOIN hospede h ON r.hospede_id = h.id JOIN quarto q ON r.quarto_id = q.id";
+        if (lista.isEmpty()) {
+            System.out.println("Nenhuma reserva foi feita.");
+            return lista;
+        }
         try (Connection conn = Conexao.conectar();
              Statement st = conn.createStatement();
              ResultSet rs = st.executeQuery(sql)) {
