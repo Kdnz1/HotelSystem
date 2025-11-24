@@ -21,6 +21,10 @@ public class HospedeDAO {
     public ArrayList<Hospede> listar() {
         ArrayList<Hospede> lista = new ArrayList<>();
         String sql = "SELECT * FROM hospede";
+        if (lista.isEmpty()) {
+            System.out.println("Nenhum hóspede foi registrado");
+            return lista;
+        }
         try (Connection conn = Conexao.conectar();
              Statement st = conn.createStatement();
              ResultSet rs = st.executeQuery(sql)) {
