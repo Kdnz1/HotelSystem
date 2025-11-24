@@ -41,6 +41,9 @@ mysql -u root < hotelDB.sql
 
 ## Compilação
 
+Selecione o diretório utilizando o comando:
+`cd src`
+
 No diretório `src`, execute:
 
 ```powershell
@@ -55,7 +58,7 @@ java -cp "lib\mysql-connector-java-5.1.49.jar;." SistemaHotel
 
 ## Dependências
 
-- **mysql-connector-java-5.1.49.jar**: Driver JDBC para conexão com MySQL
+- **mysql-connector-java-5.1.49.jar**: Driver JDBC para conexão com MySQL, já adicionado na pasta `lib` do projeto.
 
 ## Funcionalidades
 
